@@ -1,0 +1,23 @@
+server:
+    port: 5123
+spring:
+    application:
+        name: SITS-CommSimSystem
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/dk?currentSchema=public&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+        username: postgres
+        password: 123456
+        type: com.zaxxer.hikari.HikariDataSource
+mybatis-plus:
+    configuration:
+        mapper-locations: classpath:mapper/*.xml
+netty:
+    port: 8080
+socket:
+  server:
+    port: 8080
+
